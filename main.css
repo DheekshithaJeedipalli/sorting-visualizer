@@ -1,0 +1,325 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e0f2fe; /* pastel light blue */
+  text-align: center;
+}
+
+/* Home Page Title */
+.title {
+  font-size: 55px;
+  margin-top: 80px;
+  color: #0369a1;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #334155;
+}
+
+/* Home Page Cards */
+.card-container {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.card {
+  padding: 40px 60px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  color: #0f172a;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.bubble {
+  background-color: #bae6fd;   /* pastel blue */
+}
+
+.selection {
+  background-color: #ddd6fe;   /* pastel purple */
+}
+
+.insertion {
+  background-color: #bbf7d0;   /* pastel green */
+}
+
+/* Bubble Sort Page Background */
+.bubble-bg {
+  background-color: #bae6fd;
+  min-height: 100vh;
+}
+
+/* Page Layout */
+.layout {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+/* Left Panel */
+.side-box {
+  width: 250px;
+  background: #e0f2fe;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 5px 14px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.side-box h3 {
+  margin-top: 0;
+  color: #075985;
+}
+
+/* Main Area */
+.main {
+  flex: 1;
+}
+
+/* Controls */
+.controls {
+  margin: 20px;
+}
+
+.controls input {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #94a3b8;
+  width: 260px;
+  font-size: 15px;
+}
+
+.controls button {
+  padding: 10px 16px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  transform: scale(1.05);
+}
+
+/* Array Area */
+#array {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  margin-top: 30px;
+  min-height: 260px;
+  padding: 20px;
+}
+
+/* Bars */
+.bar {
+  width: 45px;
+  background: #0284c7;
+  border-radius: 8px 8px 0 0;
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+  padding-bottom: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+/* Comparison / Swap / Sorted colors */
+.compare {
+  background: #facc15 !important; /* yellow */
+}
+
+.swap {
+  background: #ef4444 !important; /* red */
+}
+
+.sorted {
+  background: #22c55e !important; /* green */
+}
+
+/* Explanation Box */
+.explanation {
+  margin: 20px auto;
+  width: 70%;
+  padding: 15px;
+  background: white;
+  border-radius: 12px;
+  font-size: 16px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Step Details Box */
+.step-box {
+  margin-top: 10px;
+  padding: 12px;
+  background: white;
+  border-radius: 10px;
+  font-size: 14px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  line-height: 1.5;
+}
+
+/* Optional scroll box if explanation becomes long */
+.full-box {
+  margin-top: 10px;
+  padding: 10px;
+  background: white;
+  border-radius: 10px;
+  font-size: 13px;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+/* Selection page background */
+.selection-bg {
+  background-color: #ddd6fe; /* pastel purple */
+}
+
+/* Layout */
+.layout {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+
+/* Left side box */
+.side-box {
+  width: 220px;
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+/* Step box */
+.step-box {
+  margin-top: 10px;
+  padding: 10px;
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+/* Bars */
+.bar {
+  width: 30px;
+  margin: 5px;
+  background: #7c3aed;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-weight: bold;
+}
+/* Insertion page background */
+.insertion-bg {
+  background-color: #bbf7d0;  /* pastel green */
+}
+
+/* Layout */
+.layout {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+
+/* Left panel */
+.side-box {
+  width: 240px;
+  background: #ecfdf5;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Step box */
+.step-box {
+  margin-top: 10px;
+  padding: 10px;
+  background: white;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* Main section */
+.main {
+  flex: 1;
+}
+
+/* Controls */
+.controls {
+  margin: 20px;
+}
+
+.controls input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.controls button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  background: #22c55e;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  transform: scale(1.1);
+}
+
+/* Array container */
+#array {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 40px;
+  height: 300px;
+}
+
+/* Bars */
+.bar {
+  width: 35px;
+  margin: 5px;
+  background: linear-gradient(to top, #16a34a, #86efac);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  font-weight: bold;
+  color: black;
+}
+
+/* Explanation box */
+.explanation {
+  margin-top: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 12px;
+  font-size: 16px;
+}

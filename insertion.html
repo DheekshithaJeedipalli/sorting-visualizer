@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Insertion Sort</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="insertion-bg">
+
+<h1 style="text-align:center;">🟩 Insertion Sort Visualization</h1>
+
+<div class="layout">
+
+  <!-- LEFT SIDE -->
+  <div class="side-box">
+    <h3>📊 Complexity</h3>
+    <p><b>Time:</b> O(n²)</p>
+    <p><b>Space:</b> O(1)</p>
+
+    <h3>🔍 Step Details</h3>
+    <div id="stepBox" class="step-box">
+      Waiting to start...
+    </div>
+
+    <h3>🧪 Default Example</h3>
+    <p>5, 3, 8, 4, 2</p>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="main">
+
+    <div class="controls">
+      <input id="userInput" placeholder="Enter numbers e.g. 5,3,8,4,2">
+      <button onclick="setArray()">Set</button>
+      <button onclick="start()">Start</button>
+      <button onclick="prevStep()">⏮ Prev</button>
+      <button onclick="nextStep()">Next ⏭</button>
+    </div>
+
+    <div id="array"></div>
+
+    <div class="explanation" id="explain">
+      👉 Click Start → Next to see Insertion Sort
+    </div>
+
+  </div>
+
+</div>
+
+<script src="insertion.js"></script>
+
+</body>
+</html>
