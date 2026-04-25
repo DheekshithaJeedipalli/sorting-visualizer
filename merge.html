@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Merge Sort</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="merge-bg">
+
+<h1 class="title">🟡 Merge Sort Visualization</h1>
+
+<div class="layout">
+
+  <!-- LEFT PANEL -->
+  <div class="side-box">
+
+    <h3>📊 Complexity</h3>
+    <p><b>Time:</b> O(n log n)</p>
+    <p><b>Space:</b> O(n)</p>
+
+    <h3>🔄 Merge Operations</h3>
+    <div id="mergeCount" class="step-box">0 merges</div>
+
+    <h3>🧪 Default Example</h3>
+    <p>5, 3, 8, 4, 2</p>
+
+    <h3>🔍 Step Details</h3>
+    <div id="stepBox" class="step-box">
+      Click Start → Next
+    </div>
+
+    <h3>💻 Implementation Code</h3>
+    <div class="code-scroll">
+<pre>
+// Merge Sort (JavaScript)
+
+function mergeSort(arr) {
+  if (arr.length <= 1) return arr;
+
+  let mid = Math.floor(arr.length / 2);
+
+  let left = mergeSort(arr.slice(0, mid));
+  let right = mergeSort(arr.slice(mid));
+
+  return merge(left, right);
+}
+
+function merge(left, right) {
+  let result = [];
+  let i = 0, j = 0;
+
+  while (i < left.length && j < right.length) {
+    if (left[i] < right[j]) {
+      result.push(left[i++]);
+    } else {
+      result.push(right[j++]);
+    }
+  }
+
+  return result.concat(left.slice(i)).concat(right.slice(j));
+}
+</pre>
+    </div>
+
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="main">
+
+    <div class="controls">
+      <input id="userInput" placeholder="Enter numbers e.g. 5,3,8,4,2">
+
+      <button onclick="useDefault()">Use Default</button>
+      <button onclick="setArray()">Set Input</button>
+      <button onclick="play()">▶ Play</button>
+
+      <br><br>
+
+      <button onclick="start()">Start</button>
+      <button onclick="prevStep()">⏮ Prev</button>
+      <button onclick="nextStep()">Next ⏭</button>
+    </div>
+
+    <div id="array"></div>
+
+    <div id="explain" class="explanation">
+      Merge Sort visualization...
+    </div>
+
+  </div>
+
+</div>
+
+<script src="merge.js"></script>
+
+</body>
+</html>

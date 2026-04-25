@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Insertion Sort</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="insertion-bg">
+
+<h1 class="title">🟩 Insertion Sort Visualization</h1>
+
+<div class="layout">
+
+  <!-- LEFT PANEL -->
+  <div class="side-box">
+
+    <h3>📊 Complexity</h3>
+    <p><b>Time:</b> O(n²)</p>
+    <p><b>Space:</b> O(1)</p>
+
+    <h3>🔢 Shifts Count</h3>
+    <div id="swapCount" class="step-box">0 shifts</div>
+
+    <h3>🧪 Default Example</h3>
+    <p>5, 3, 8, 4, 2</p>
+
+    <h3>🔍 Step Details</h3>
+    <div id="stepBox" class="step-box">
+      Click Start → Next
+    </div>
+
+    <h3>💻 Code</h3>
+    <div class="code-scroll">
+<pre>
+// Insertion Sort
+
+function insertionSort(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    let key = arr[i];
+    let j = i - 1;
+
+    while (j >= 0 && arr[j] > key) {
+      arr[j + 1] = arr[j];
+      j--;
+    }
+
+    arr[j + 1] = key;
+  }
+  return arr;
+}
+</pre>
+    </div>
+
+  </div>
+
+  <!-- RIGHT -->
+  <div class="main">
+
+    <div class="controls">
+      <input id="userInput" placeholder="Enter numbers e.g. 5,3,8,4,2">
+      <button onclick="useDefault()">Use Default</button>
+      <button onclick="setArray()">Set Input</button>
+      <button onclick="play()">▶ Play</button>
+
+      <br><br>
+
+      <button onclick="start()">Start</button>
+      <button onclick="prevStep()">⏮ Prev</button>
+      <button onclick="nextStep()">Next ⏭</button>
+    </div>
+
+    <div id="array"></div>
+
+    <div id="explain" class="explanation">
+      Visualization explanation appears here...
+    </div>
+
+  </div>
+
+</div>
+
+<script src="insertion.js"></script>
+
+</body>
+</html>

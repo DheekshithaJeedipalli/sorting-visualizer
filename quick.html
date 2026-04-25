@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quick Sort</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="quick-bg"></body>
+
+<h1 class="title">⚡ Quick Sort Visualization</h1>
+
+<div class="layout">
+
+  <!-- LEFT SIDE -->
+  <div class="side-box">
+
+    <h3>📊 Complexity</h3>
+    <p><b>Time:</b> O(n log n)</p>
+    <p><b>Space:</b> O(log n)</p>
+
+    <h3>🔢 Swaps Count</h3>
+    <div id="swapCount" class="step-box">
+      0 swaps
+    </div>
+
+    <!-- 💻 CODE BLOCK (INSIDE PANEL) -->
+    <h3>💻 Code</h3>
+    <div class="code-scroll">
+<pre>
+// Quick Sort (JavaScript)
+
+function quickSort(arr, low, high) {
+  if (low < high) {
+    let pi = partition(arr, low, high);
+
+    quickSort(arr, low, pi - 1);
+    quickSort(arr, pi + 1, high);
+  }
+}
+
+function partition(arr, low, high) {
+  let pivot = arr[high];
+  let i = low - 1;
+
+  for (let j = low; j < high; j++) {
+    if (arr[j] < pivot) {
+      i++;
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+  }
+
+  [arr[i + 1], arr[high]] = [arr[high], arr[i + 1]];
+  return i + 1;
+}
+</pre>
+    </div>
+
+    <h3>🧪 Default Example</h3>
+    <p>5, 3, 8, 4, 2</p>
+
+    <h3>🔍 Step Details</h3>
+    <div id="stepBox" class="step-box">
+      Click Start → Next
+    </div>
+
+  </div>
+
+
+  <!-- RIGHT SIDE -->
+  <div class="main">
+
+    <div class="controls">
+
+      <input id="userInput" placeholder="Enter numbers e.g. 9,2,7,1">
+
+      <button onclick="useDefault()">Use Default</button>
+      <button onclick="setArray()">Set Input</button>
+      <button onclick="play()">▶ Play</button>
+
+      <br><br>
+
+      <button onclick="start()">Start</button>
+      <button onclick="prevStep()">⏮ Prev</button>
+      <button onclick="nextStep()">Next ⏭</button>
+
+    </div>
+
+    <div id="array"></div>
+
+    <div id="explain" class="explanation">
+      Visualization explanation appears here...
+    </div>
+
+  </div>
+
+</div>
+
+<script src="quick.js"></script>
+
+</body>
+</html>

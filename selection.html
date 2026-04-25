@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Selection Sort</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="selection-bg">
+
+<h1 class="title">🟪 Selection Sort Visualization</h1>
+
+<div class="layout">
+
+  <!-- LEFT PANEL -->
+  <div class="side-box">
+
+    <h3>📊 Complexity</h3>
+    <p><b>Time:</b> O(n²)</p>
+    <p><b>Space:</b> O(1)</p>
+
+    <h3>🔢 Swaps Count</h3>
+    <div id="swapCount" class="step-box">0 swaps</div>
+
+    <h3>🧪 Default Example</h3>
+    <p>5, 3, 8, 4, 2</p>
+
+    <h3>🔍 Step Details</h3>
+    <div id="stepBox" class="step-box">
+      Click Start → Next
+    </div>
+
+    <h3>💻 Code</h3>
+    <div class="code-scroll">
+<pre>
+// Selection Sort
+
+function selectionSort(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let min = i;
+
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[min]) {
+        min = j;
+      }
+    }
+
+    if (min !== i) {
+      [arr[i], arr[min]] = [arr[min], arr[i]];
+    }
+  }
+  return arr;
+}
+</pre>
+    </div>
+
+  </div>
+
+  <!-- RIGHT -->
+  <div class="main">
+
+    <div class="controls">
+      <input id="userInput" placeholder="Enter numbers e.g. 5,3,8,4,2">
+      <button onclick="useDefault()">Use Default</button>
+      <button onclick="setArray()">Set Input</button>
+      <button onclick="play()">▶ Play</button>
+
+      <br><br>
+
+      <button onclick="start()">Start</button>
+      <button onclick="prevStep()">⏮ Prev</button>
+      <button onclick="nextStep()">Next ⏭</button>
+    </div>
+
+    <div id="array"></div>
+
+    <div id="explain" class="explanation">
+      Visualization explanation appears here...
+    </div>
+
+  </div>
+
+</div>
+
+<script src="selection.js"></script>
+
+</body>
+</html>

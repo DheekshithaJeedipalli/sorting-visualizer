@@ -1,0 +1,257 @@
+/* 🌐 GLOBAL */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e0f2fe;
+  text-align: center;
+}
+
+/* 🏷 TITLE */
+.title {
+  font-size: 55px;
+  margin-top: 80px;
+  color: #0369a1;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #334155;
+}
+
+/* 🏠 HOME CARDS */
+.card-container {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.card {
+  padding: 40px 60px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  color: #0f172a;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.bubble { background-color: #bae6fd; }
+.selection { background-color: #ddd6fe; }
+.insertion { background-color: #bbf7d0; }
+
+/* 🎨 PAGE BACKGROUNDS */
+.bubble-bg { background-color: #bae6fd; min-height: 100vh; }
+.selection-bg { background-color: #ddd6fe; min-height: 100vh; }
+.insertion-bg { background-color: #bbf7d0; min-height: 100vh; }
+
+/* 📦 LAYOUT */
+.layout {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+/* 📘 LEFT PANEL */
+.side-box {
+  width: 260px;
+  background: #e0f2fe;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 5px 14px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.side-box h3 {
+  margin-top: 18px;
+  color: #075985;
+}
+
+/* 📗 MAIN AREA */
+.main {
+  flex: 1;
+}
+
+/* 🎛 CONTROLS */
+.controls {
+  margin: 20px;
+}
+
+.controls input {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #94a3b8;
+  width: 260px;
+  font-size: 15px;
+}
+
+.controls button {
+  padding: 10px 16px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  transform: scale(1.05);
+}
+
+/* 📊 ARRAY */
+#array {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  margin-top: 30px;
+  min-height: 260px;
+  padding: 20px;
+}
+
+/* 📊 BASE BAR */
+.bar {
+  width: 45px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+  padding-bottom: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  transition: all 0.4s ease;
+}
+
+/* 🎨 ALGORITHM COLORS */
+.bubble-bg .bar {
+  background: #0284c7;
+}
+
+.selection-bg .bar {
+  background: #7c3aed;
+}
+
+.insertion-bg .bar {
+  background: linear-gradient(to top, #16a34a, #86efac);
+}
+
+/* 🔁 STATES */
+.compare { background: #facc15 !important; }
+.swap { background: #ef4444 !important; }
+.sorted { background: #22c55e !important; }
+
+/* 📘 EXPLANATION */
+.explanation {
+  margin: 20px auto;
+  width: 70%;
+  padding: 15px;
+  background: white;
+  border-radius: 12px;
+  font-size: 16px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* 📊 STEP BOX */
+.step-box {
+  margin-top: 10px;
+  padding: 12px;
+  background: white;
+  border-radius: 10px;
+  font-size: 14px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* 💻 CODE BLOCK (MATCH LEFT PANEL) */
+.code-scroll {
+  background: #e0f2fe;   /* SAME as side-box */
+  color: #0f172a;
+  padding: 12px;
+  border-radius: 10px;
+  font-family: monospace;
+  font-size: 13px;
+  height: 180px;
+  overflow-y: auto;
+}
+
+/* remove spacing */
+.code-scroll pre {
+  margin: 0;
+}
+
+/* ✨ SCROLLBAR */
+.code-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.code-scroll::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 10px;
+}
+/* 🌿 Bubble → very light pastel green */
+.bubble-bg .side-box {
+  background: #ecfdf5;
+}
+
+/* 🌊 Selection → very light pastel blue */
+.selection-bg .side-box {
+  background: #f0f9ff;
+}
+
+/* 💜 Insertion → very light pastel lavender */
+.insertion-bg .side-box {
+  background: #f5f3ff;
+}
+/* 🌿 Bubble → soft pastel green background */
+
+/* 🔵 Bubble → lighter pastel blue */
+.bubble-bg {
+  background-color: #dbeafe;
+}
+
+/* 💜 Selection → lighter pastel lavender */
+.selection-bg {
+  background-color: #ede9fe;
+}
+
+/* 🟢 Insertion → lighter pastel green */
+.insertion-bg {
+  background-color: #dcfce7;
+}
+/* Quick Sort page background */
+/* 🟠 Quick → very light pastel orange */
+.quick-bg {
+  background-color: #fff7ed;
+  min-height: 100vh;
+}
+/* Quick Sort left panel */
+.quick {
+  background-color: #fed7aa; /* pastel light orange */
+}
+/* 🟠 Quick Sort bars → soft orange */
+.quick-bg .bar {
+  background: linear-gradient(to top, #fb923c, #fed7aa);
+}
+.merge-bg {
+  background-color: #fffbeb; /* very light pastel yellow */
+  min-height: 100vh;
+}
+.merge-bg .side-box {
+  background: #fce7f3; /* light pastel pink */
+}
+.merge {
+  background-color: #fde68a; /* light pastel yellow */
+}
+.merge-bg .bar {
+  background: linear-gradient(to top, #eab308, #fde68a);
+}

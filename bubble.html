@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bubble Sort</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="bubble-bg">
+
+<h1 class="title">🟦 Bubble Sort Visualization</h1>
+
+<div class="layout">
+
+  <!-- LEFT SIDE -->
+  <div class="side-box">
+
+    <h3>📊 Complexity</h3>
+    <p><b>Time:</b> O(n²)</p>
+    <p><b>Space:</b> O(1)</p>
+
+    <h3>🔢 Swaps Count</h3>
+    <div id="swapCount" class="step-box">
+      0 swaps
+    </div>
+
+    <h3>🧪 Default Example</h3>
+    <p>5, 3, 8, 4, 2</p>
+
+    <h3>🔍 Step Details</h3>
+    <div id="stepBox" class="step-box">
+      Click Start → Next
+    </div>
+
+    <!-- ✅ CODE BLOCK (FIXED POSITION) -->
+    <h3>💻 Code</h3>
+    <div class="code-scroll">
+<pre>
+// Bubble Sort (JavaScript)
+
+function bubbleSort(arr) {
+  let n = arr.length;
+
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n - i - 1; j++) {
+
+      if (arr[j] > arr[j + 1]) {
+
+        // swap
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+
+    }
+  }
+
+  return arr;
+}
+</pre>
+    </div>
+
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="main">
+
+    <div class="controls">
+
+      <!-- User Input -->
+      <input id="userInput" placeholder="Enter numbers e.g. 9,2,7,1">
+
+      <button onclick="useDefault()">Use Default</button>
+      <button onclick="setArray()">Set Input</button>
+      <button onclick="play()">▶ Play</button>
+
+      <br><br>
+
+      <button onclick="start()">Start</button>
+      <button onclick="prevStep()">⏮ Prev</button>
+      <button onclick="nextStep()">Next ⏭</button>
+
+    </div>
+
+    <!-- VISUALIZATION -->
+    <div id="array"></div>
+
+    <!-- EXPLANATION -->
+    <div id="explain" class="explanation">
+      Visualization explanation appears here...
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
